@@ -1,4 +1,4 @@
-from rules_manager import RulehisManager
+from rules_manager.rules_manager import RulesManager
 from conversation_manager import ConversationManager
 
 def main():

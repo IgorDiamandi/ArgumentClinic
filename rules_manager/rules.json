@@ -1,0 +1,35 @@
+{
+    "default": "Default response is a bad response!",
+    "rules": [
+        {"pattern": ".*\\bhi\\b.*", "response": "I've already told you!"},
+        {"pattern": ".*\\bhello\\b.*", "response": "I've already told you!"},
+        {"pattern": ".*\\bgreetings\\b.*", "response": "I've already told you!"},
+        {"pattern": ".*\\bOh! What?\\b.*", "response": "DON'T GIVE ME THAT! YOU SNOTTY-FACED HEAP OF PARROT DROPPING"},
+        {"pattern": ".*\\bare\\b.*\\byou\\b.*", "response": "No you're not!"},
+        {"pattern": ".*\\bno\\b.*", "response": "Yes!"},
+        {"pattern": ".*\\byes\\b.*", "response": "No!"},
+        {"pattern": ".*\\b42\\b.*", "response": "WHERE DID YOU LEARN ABOUT THAT?!"},
+
+        {"pattern": ".*\\bare\\b.*\\byou\\b.*", "response": "No you're not!"},
+        {"pattern": ".*\\bam\\b.*\\bi\\b.*", "response": "No you're not!"},
+        {"pattern": ".*\\bis\\b.*\\bhe\\b.*", "response": "No he ain't!"},
+        {"pattern": ".*\\bis\\b.*\\bshe\\b.*", "response": "No she ain't!"},
+        {"pattern": ".*\\bis\\b.*\\bit\\b.*", "response": "No it ain't!"},
+        {"pattern": ".*\\bare\\b.*\\bwe\\b.*", "response": "No we're not!"},
+        {"pattern": ".*\\bare\\b.*\\bthey\\b.*", "response": "No they aren't!"},
+        {"pattern": ".*\\bdid\\b.*\\bi\\b.*\\?", "response": "No you didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\byou\\b.*\\?", "response": "No I didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bhe\\b.*\\?", "response": "No he didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bshe\\b.*\\?", "response": "No she didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bit\\b.*\\?", "response": "No it didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bwe\\b.*\\?", "response": "No we didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bthey\\b.*\\?", "response": "No they didn't!"},
+        {"pattern": ".*\\bdid\\b.*\\bi\\b.*\\bnot\\b.*\\?", "response": "Yes you did!"},
+        {"pattern": ".*\\bdid\\b.*\\byou\\b.*\\bnot\\b.*\\?", "response": "Yes I did!"},
+        {"pattern": ".*\\bdid\\b.*\\bhe\\b.*\\bnot\\b.*\\?", "response": "Yes he did!"},
+        {"pattern": ".*\\bdid\\b.*\\bshe\\b.*\\bnot\\b.*\\?", "response": "Yes she did!"},
+        {"pattern": ".*\\bdid\\b.*\\bit\\b.*\\bnot\\b.*\\?", "response": "Yes it did!"},
+        {"pattern": ".*\\bdid\\b.*\\bwe\\b.*\\bnot\\b.*\\?", "response": "Yes we did!"},
+        {"pattern": ".*\\bdid\\b.*\\bthey\\b.*\\bnot\\b.*\\?", "response": "Yes they did!"}
+    ]
+}
