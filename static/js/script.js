@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
-    const sendButton = document.getElementById('send-button');
     const rulesList = document.getElementById('rules-list');
+    const prolongButton = document.getElementById('prolong-button');
 
     // Function to append messages to chat
     function appendMessage(actor, message, className) {
@@ -40,24 +40,46 @@ document.addEventListener('DOMContentLoaded', () => {
         appendMessage('MR. BARNARD', data.response, 'bot-message');
     }
 
-    sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             sendMessage();
         }
     });
 
+    prolongButton.addEventListener('click', async () => {
+        const response = await fetch('/pay', {
+            method: 'POST'
+        });
+        const data = await response.json();
+        appendMessage('MR. BARNARD', data.message, 'bot-message');
+        prolongButton.style.display = 'none';
+    });
+
     // Function to load rules
     async function loadRules() {
-        const response = await fetch('/static/rules.json');
+        const response = await fetch('/static/guide.json');
         const data = await response.json();
-        data.rules.forEach(rule => {
+        data.rules.forEach((rule, index) => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${rule.pattern}: ${rule.response}`;
+            listItem.innerHTML = `<b>Rule #${index + 1}:</b> ${rule.text}`;
             rulesList.appendChild(listItem);
         });
     }
 
     // Load rules on page load
     loadRules();
+
+    // Function to check prolongation status
+    async function checkStatus() {
+        const response = await fetch('/check_status');
+        const data = await response.json();
+        if (data.message) {
+            appendMessage('MR. BARNARD', data.message, 'bot-message');
+            prolongButton.style.display = 'block';
+        }
+        setTimeout(checkStatus, 5000); // Poll every 5 seconds
+    }
+
+    // Start checking the prolongation status
+    checkStatus();
 });

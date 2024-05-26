@@ -1,0 +1,11 @@
+{
+    "rules": [
+        {"text": "It's nice when customers are saying 'hello'. We like it here in the clinic, we may or may not go on with the service without a proper greeting."},
+        {"text": "It's not a final product, so don't expect it to be intelligent."},
+        {"text": "We're geek friendly in our clinic, try typing 'Oh! What?' :)"},
+        {"text": "We're bug free. Seriously no bugs here, only features."},
+        {"text": "Try inputting '42'... yea, we're geek friendly."},
+        {"text": "An argument session lasts 5 minutes. You'll have to pay for prolonging it by another 5 minutes once it's over."},
+        {"text": "5 minutes are precisely 5 minutes. No need to argue about that."}
+    ]
+}
