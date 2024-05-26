@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from timer_manager import add_client, get_client_status, reset_client_status
+from session_timer import SessionTimer
 from conversation_manager import ConversationManager
 from rules_manager.rules_manager import RulesManager
 
@@ -12,7 +12,7 @@ conversation_manager = ConversationManager(rules_manager)
 @app.route('/')
 def index():
     user_id = request.remote_addr
-    add_client(user_id)
+    SessionTimer.add_client(user_id)
     return render_template('index.html')
 
 
@@ -20,7 +20,7 @@ def index():
 def get_response():
     user_id = request.remote_addr
     user_input = request.json.get('user_input')
-    client_status = get_client_status(user_id)
+    client_status = SessionTimer.get_client_status(user_id)
     if client_status['paid']:
         response = conversation_manager.get_response(user_input)  # Use user_input to get the response
     else:
@@ -31,14 +31,14 @@ def get_response():
 @app.route('/check_status', methods=['GET'])
 def check_status():
     user_id = request.remote_addr
-    client_status = get_client_status(user_id)
+    client_status = SessionTimer.get_client_status(user_id)
     return jsonify({'message': client_status['message'], 'paid': client_status['paid']})
 
 
 @app.route('/pay', methods=['POST'])
 def pay():
     user_id = request.remote_addr
-    reset_client_status(user_id)
+    SessionTimer.reset_client_status(user_id)
     return jsonify({'message': "Here you are, go on then!"})
 
 
