@@ -10,7 +10,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@ body {
 }
 
 .rules-container {
-    width: 30%;
+    width: 45%;
     padding: 15px;
     background-color: #fafafa;
     border-right: 1px solid #ddd;
@@ -88,7 +88,7 @@ body {
 }
 
 .user-message {
-    background-color: #dcf8c6;
+    background-color: #e5fdd2;
     align-self: flex-end;
     margin-right: 10px;
 }

@@ -10,6 +10,11 @@
         {"pattern": ".*\\byes\\b.*", "response": "No!"},
         {"pattern": ".*\\b42\\b.*", "response": "WHERE DID YOU LEARN ABOUT THAT?!"},
 
+        {"pattern": ".*\\bsilly\\b.*", "response": "you're silly!"},
+
+        {"pattern": ".*\\bi've\\b.*\\bgot\\b.*\\byou\\b.*", "response": "No, you haven't!"},
+        {"pattern": ".*\\byou've\\b.*\\bgot\\b.*\\bme\\b.*", "response": "No, I haven't!"},
+
         {"pattern": ".*\\bare\\b.*\\byou\\b.*", "response": "No you're not!"},
         {"pattern": ".*\\bam\\b.*\\bi\\b.*", "response": "No you're not!"},
         {"pattern": ".*\\bis\\b.*\\bhe\\b.*", "response": "No he ain't!"},

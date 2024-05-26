@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const rulesList = document.getElementById('rules-list');
     const prolongButton = document.getElementById('prolong-button');
 
-    // Function to append messages to chat
     function appendMessage(actor, message, className) {
         const messageElement = document.createElement('div');
         messageElement.className = `chat-message ${className}`;
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    // Function to send messages
     async function sendMessage() {
         const userMessage = userInput.value;
         if (userMessage.trim() === '') return;
@@ -66,10 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Load rules on page load
     loadRules();
 
-    // Function to check prolongation status
     async function checkStatus() {
         const response = await fetch('/check_status');
         const data = await response.json();
@@ -77,9 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             appendMessage('MR. BARNARD', data.message, 'bot-message');
             prolongButton.style.display = 'block';
         }
-        setTimeout(checkStatus, 5000); // Poll every 5 seconds
+        setTimeout(checkStatus, 30000);
     }
 
-    // Start checking the prolongation status
     checkStatus();
 });

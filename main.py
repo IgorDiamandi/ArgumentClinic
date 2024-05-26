@@ -6,5 +6,6 @@ def main():
     conversation_manager = ConversationManager(rules_manager)
     conversation_manager.start_conversation()
 
+
 if __name__ == "__main__":
     main()
