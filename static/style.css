@@ -1,0 +1,74 @@
+/* static/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ece5dd;
+    margin: 0;
+}
+#chat-container {
+    width: 360px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+#input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e0e0e0;
+}
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+#send-button, #prolong-button {
+    background-color: #25d366;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.chat-message {
+    display: flex;
+    margin: 5px 0;
+}
+.user-message {
+    justify-content: flex-end;
+}
+.clinic-message {
+    justify-content: flex-start;
+}
+.message-content {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+.user-message .message-content {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+.clinic-message .message-content {
+    background-color: #ffffff;
+    align-self: flex-start;
+}
