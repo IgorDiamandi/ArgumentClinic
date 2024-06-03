@@ -2,6 +2,7 @@ import random
 import re
 import json
 
+
 class ConversationManager:
     def __init__(self, response_file='data/responses.json'):
         with open(response_file, 'r') as file:

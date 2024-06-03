@@ -1,28 +1,50 @@
 {
     "greetings": [
-        {"pattern": "\\b(hi|hey|hello|good morning|good evening)\\b",
-            "responses": ["I've already told you!"]}
+        {"pattern": "\\b(hi|hey|hello|good morning|good evening|sup|howdy)\\b", "responses": ["I've already told you!"]},
+        {"pattern": "\\b(what's up|wassup|yo)\\b", "responses": ["Not much, I've already told you!"]},
+        {"pattern": "\\b(hey there|hi there)\\b", "responses": ["Hey, I've already told you!!"]},
+        {"pattern": "\\b(good afternoon)\\b", "responses": ["Good afternoon, I've already told you!"]},
+        {"pattern": "\\b(good night)\\b", "responses": ["Good night, I've already told you!!"]},
+        {"pattern": "\\b(greetings)\\b", "responses": ["Greetings, I've already told you!"]},
+        {"pattern": "\\b(hello there)\\b", "responses": ["Hello, I've already told you!"]},
+        {"pattern": "\\b(hi everyone)\\b", "responses": ["Hello all, I've already told you!"]},
+        {"pattern": "\\b(hi there)\\b", "responses": ["Hi, I've already told you!"]},
+        {"pattern": "\\b(hiya)\\b", "responses": ["Hi there, I've already told you!"]},
+        {"pattern": "\\b(good to see you)\\b", "responses": ["Good to see you too, I've already told you!"]},
+        {"pattern": "\\b(nice to see you)\\b", "responses": ["Nice to see you as well, I've already told you!"]},
+        {"pattern": "\\b(how are you|how's it going|how do you do)\\b", "responses": ["I'm fine, thank you, I've already told you!"]},
+        {"pattern": "\\b(long time no see)\\b", "responses": ["It's been a while, I've already told you!"]},
+        {"pattern": "\\b(what's happening)\\b", "responses": ["Not much, you, You've already told me?"]},
+        {"pattern": "\\b(welcome)\\b", "responses": ["Thank you, I've already told you!"]},
+        {"pattern": "\\b(yo)\\b", "responses": ["Yo, I've already told you!"]},
+        {"pattern": "\\b(hey there!)\\b", "responses": ["Hey, I've already told you!"]},
+        {"pattern": "\\b(hi folks)\\b", "responses": ["Hello folks, I've already told you!"]},
+        {"pattern": "\\b(hi team)\\b", "responses": ["Hi team, I've already told you!"]},
+        {"pattern": "\\b(hello world)\\b", "responses": ["Hello, I've already told you!"]},
+        {"pattern": "\\b(salutations)\\b", "responses": ["Salutations, I've already told you!"]},
+        {"pattern": "\\b(hi all)\\b", "responses": ["Hello everyone, I've already told you!"]},
+        {"pattern": "\\b(hi friend)\\b", "responses": ["Hi there!"]},
+        {"pattern": "\\b(hi buddy)\\b", "responses": ["Hey buddy, I've already told you!"]}
     ],
     "negations": [
-        {"pattern": "\\b(no|not)\\b",
-            "responses": ["Yes!"]}
+        {"pattern": "\\b(no|not)\\b","responses": ["Yes!"]}
     ],
-    "questions": [{"pattern": "\\?$",
-            "responses": ["Why do you ask?","What's the question, really?"]}
+    "questions": [{"pattern": "\\?$","responses": ["Why do you ask?","What's the question, really?"]}
     ],
     "affirmations": [
-        {"pattern": "\\b(yes|yeah|sure)\\b",
-            "responses": ["Is it really, or are we just agreeing to disagree?",
+        {"pattern": "\\b(yes|yeah|sure)\\b","responses": ["Is it really, or are we just agreeing to disagree?",
                 "Are you absolutely sure?"]}
     ],
     "personal_statements": [
-        {"pattern": "\\b(I am|I think|I believe)\\b",
-            "responses": ["What if it's just a different way of thinking?",
-                "Why do you believe that?"]}
+        {"pattern": "\\b(I am|I think|I believe)\\b","responses": ["What if it's just a different way of thinking?",
+                "Why do you believe that?"]},
+        {"pattern": "\\b(you are|you think)\\b","responses": ["Am I? Really", "You're just projecting it on me"]}
+    ],
+    "insults": [
+        {"pattern": "\\b(silly)\\b", "responses": ["Silly? Oh Really?"] }
     ],
     "keywords": [
-        {"pattern": "\\b(always|never|impossible)\\b",
-            "responses": ["Always? Isn't life full of exceptions?","Never say never!"]}
+        {"pattern": "\\b(always|never|impossible)\\b","responses": ["Always? Isn't life full of exceptions?","Never say never!"]}
     ],
     "default": [
         "Default response - a bad response!"
