@@ -1,4 +1,3 @@
-# argument_clinic/user_profile.py
 class UserProfileManager:
     def __init__(self):
         self.profiles = {}

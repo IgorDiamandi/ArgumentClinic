@@ -1,69 +1,30 @@
 {
     "greetings": [
-        {
-            "pattern": "\\b(hi|hey|hello|good morning|good evening|)\\b",
-            "responses": [
-                "I've already told you!"
-            ]
-        }
+        {"pattern": "\\b(hi|hey|hello|good morning|good evening)\\b",
+            "responses": ["I've already told you!"]}
     ],
     "negations": [
-        {
-            "pattern": "\\b(no|not|never)\\b",
-            "responses": [
-                "But what if the opposite is true?",
-                "What if I am making sense and it's the world that's confused?"
-            ]
-        }
+        {"pattern": "\\b(no|not)\\b",
+            "responses": ["Yes!"]}
     ],
-    "questions": [
-        {
-            "pattern": "\\?$",
-            "responses": [
-                "Why do you ask?",
-                "Is understanding the same as agreeing?"
-            ]
-        }
+    "questions": [{"pattern": "\\?$",
+            "responses": ["Why do you ask?","What's the question, really?"]}
     ],
     "affirmations": [
-        {
-            "pattern": "\\b(yes|yeah|sure)\\b",
-            "responses": [
-                "Is it really, or are we just agreeing to disagree?",
-                "Are you absolutely sure?"
-            ]
-        }
-    ],
-    "repetitions": [
-        {
-            "pattern": "(.*)\\1",
-            "responses": [
-                "This feels like déjà vu. Or is it just a spirited agreement?",
-                "Are you sure you're not repeating yourself?"
-            ]
-        }
+        {"pattern": "\\b(yes|yeah|sure)\\b",
+            "responses": ["Is it really, or are we just agreeing to disagree?",
+                "Are you absolutely sure?"]}
     ],
     "personal_statements": [
-        {
-            "pattern": "\\b(I am|I think|I believe)\\b",
-            "responses": [
-                "What if it's just a different way of thinking?",
-                "Why do you believe that?"
-            ]
-        }
+        {"pattern": "\\b(I am|I think|I believe)\\b",
+            "responses": ["What if it's just a different way of thinking?",
+                "Why do you believe that?"]}
     ],
     "keywords": [
-        {
-            "pattern": "\\b(always|never|impossible)\\b",
-            "responses": [
-                "Always? Isn't life full of exceptions?",
-                "Never say never!"
-            ]
-        }
+        {"pattern": "\\b(always|never|impossible)\\b",
+            "responses": ["Always? Isn't life full of exceptions?","Never say never!"]}
     ],
     "default": [
-        "Interesting point!",
-        "Can you explain further?",
-        "I see what you mean."
+        "Default response - a bad response!"
     ]
 }

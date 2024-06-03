@@ -15,7 +15,7 @@ class ConversationManager:
         ]
         self.default_responses = self.responses["default"]
 
-    def get_response(self, user_input):
+    def get_response(self, user_input, context):
         for pattern, responses in self.rules:
             if pattern.search(user_input):
                 return random.choice(responses)

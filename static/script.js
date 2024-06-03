@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const data = await response.json();
         appendMessage('Clinic', data.response, 'clinic-message');
+
+        if (data.response === "No argument till you're paying") {
+            prolongButton.style.display = 'block';
+        }
     }
 
     userInput.addEventListener('keypress', (e) => {
